@@ -1,0 +1,3 @@
+# Install python
+- name: "Installing python on new vm"
+  include_tasks: "debian.yml"

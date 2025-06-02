@@ -1,0 +1,4 @@
+- name: "python install with raw"
+  raw: apt -y update && apt install -y python3
+  args:
+    executable: /bin/bash

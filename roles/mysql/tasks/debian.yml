@@ -1,0 +1,22 @@
+#Installing MYSQL
+   - name: "Install pymysql via apt"
+     ansible.builtin.apt:
+       name: "python3-pymysql"
+       state: "latest"
+       update_cache: "true"
+
+   - name: "Install mysql via apt"
+     ansible.builtin.apt:
+       name: "mariadb-server"
+       state: "latest"
+       update_cache: "true"
+          
+   - name: "Setup root user"
+     community.mysql.mysql_user:
+       name: "root"
+       password: "7825"
+       login_user: "root"
+       login_password: "7825"
+       check_implicit_admin: true 
+       login_unix_socket: "/var/run/mysqld/mysqld.sock"
+       update_cache: true
