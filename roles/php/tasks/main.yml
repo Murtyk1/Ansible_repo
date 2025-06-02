@@ -1,0 +1,4 @@
+   #Installing PHP
+   
+   - name: "installing php fpm and php mysql"
+     include_tasks: "debian.yml"
